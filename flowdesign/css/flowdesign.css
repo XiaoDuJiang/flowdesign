@@ -1,0 +1,393 @@
+/*节点有关的css*/
+
+[class*="node-1-"],
+[class*="node-2-"],
+[class*="node-3-"],
+[class*="node-4-"],
+[class*="node-7-"] {
+	background-size: 120px auto !important;
+	font-size: 14px !important;
+	color: white !important;
+	background-repeat: no-repeat !important;
+	line-height: 56px !important;
+	width: 120px !important;
+	padding: 5px !important;
+	height: 65px !important;
+}
+
+[class*="node-5-"],
+[class*="node-6-"] {
+	background-size: 80px auto !important;
+	font-size: 12px !important;
+	color: white !important;
+	background-repeat: no-repeat !important;
+	width: 80px !important;
+	line-height: 32px !important;
+	height: 43px !important;
+	min-width: auto;
+}
+
+
+/*普通节点*/
+
+
+/*查阅*/
+
+
+/*正常*/
+
+.node-1-1-1 {
+	background-image: url(img/2.png) !important;
+}
+
+
+/*正在执行*/
+
+.node-1-1-2 {
+	background-image: url(img/1.png) !important;
+}
+
+
+/*尚未执行*/
+
+.node-1-1-3 {
+	background-image: url(img/3.png) !important;
+}
+
+
+/*开始*/
+
+.node-2-1-1 {
+	color: black !important;
+	background-image: url(img/4.png) !important;
+}
+
+
+/*结束*/
+
+.node-3-1-1 {
+	color: black !important;
+	background-image: url(img/5.png) !important;
+}
+
+
+/*异常*/
+
+.node-1-1-v {
+	background-image: url(img/6.png) !important;
+}
+
+.node-2-1-v {
+	background-image: url(img/6.png) !important;
+}
+
+.node-3-1-v {
+	background-image: url(img/6.png) !important;
+}
+
+
+/*分配*/
+
+
+/*正常*/
+
+.node-1-2-1 {
+	background-image: url(img/8.png) !important;
+	line-height: 50px !important;
+	height: 59px !important;
+}
+
+
+/*正在执行*/
+
+.node-1-2-2 {
+	background-image: url(img/7.png) !important;
+	line-height: 50px !important;
+	height: 59px !important;
+}
+
+
+/*尚未执行*/
+
+.node-1-2-3 {
+	background-image: url(img/9.png) !important;
+	line-height: 50px !important;
+	height: 59px !important;
+}
+
+
+/*开始*/
+
+.node-2-2-1 {
+	color: black !important;
+	background-image: url(img/10.png) !important;
+	line-height: 50px !important;
+	height: 59px !important;
+}
+
+
+/*结束*/
+
+.node-3-2-1 {
+	color: black !important;
+	background-image: url(img/11.png) !important;
+	line-height: 50px !important;
+	height: 59px !important;
+}
+
+
+/*异常*/
+
+.node-1-2-v {
+	background-image: url(img/12.png) !important;
+	line-height: 50px !important;
+	height: 59px !important;
+}
+
+.node-2-2-v {
+	background-image: url(img/12.png) !important;
+	line-height: 50px !important;
+	height: 59px !important;
+}
+
+.node-3-2-v {
+	background-image: url(img/12.png) !important;
+	line-height: 50px !important;
+	height: 59px !important;
+}
+
+
+/*录入*/
+
+
+/*正常*/
+
+.node-1-3-1 {
+	background-image: url(img/14.png) !important;
+}
+
+
+/*正在执行*/
+
+.node-1-3-2 {
+	background-image: url(img/13.png) !important;
+}
+
+
+/*尚未执行*/
+
+.node-1-3-3 {
+	background-image: url(img/15.png) !important;
+}
+
+
+/*开始*/
+
+.node-2-3-1 {
+	color: black !important;
+	background-image: url(img/16.png) !important;
+}
+
+
+/*结束*/
+
+.node-3-3-1 {
+	color: black !important;
+	background-image: url(img/17.png) !important;
+}
+
+
+/*异常*/
+
+.node-1-3-v {
+	background-image: url(img/18.png) !important;
+}
+
+.node-2-3-v {
+	background-image: url(img/18.png) !important;
+}
+
+.node-3-3-v {
+	background-image: url(img/18.png) !important;
+}
+
+
+/*校队*/
+
+
+/*正常*/
+
+.node-1-4-1 {
+	background-image: url(img/20.png) !important;
+}
+
+
+/*正在执行*/
+
+.node-1-4-2 {
+	background-image: url(img/19.png) !important;
+}
+
+
+/*尚未执行*/
+
+.node-1-4-3 {
+	background-image: url(img/21.png) !important;
+}
+
+
+/*开始*/
+
+.node-2-4-1 {
+	color: black !important;
+	background-image: url(img/22.png) !important;
+}
+
+
+/*结束*/
+
+.node-3-4-1 {
+	color: black !important;
+	background-image: url(img/23.png) !important;
+}
+
+
+/*异常*/
+
+.node-1-4-v {
+	background-image: url(img/24.png) !important;
+}
+
+.node-2-4-v {
+	background-image: url(img/24.png) !important;
+}
+
+.node-3-4-v {
+	background-image: url(img/24.png) !important;
+}
+
+
+/*审核*/
+
+
+/*正常*/
+
+.node-1-5-1 {
+	background-image: url(img/26.png) !important;
+}
+
+
+/*正在执行*/
+
+.node-1-5-2 {
+	background-image: url(img/25.png) !important;
+}
+
+
+/*尚未执行*/
+
+.node-1-5-3 {
+	background-image: url(img/27.png) !important;
+}
+
+
+/*开始*/
+
+.node-2-5-1 {
+	color: black !important;
+	background-image: url(img/28.png) !important;
+}
+
+
+/*结束*/
+
+.node-3-5-1 {
+	color: black !important;
+	background-image: url(img/29.png) !important;
+}
+
+
+/*异常*/
+
+.node-1-5-v {
+	background-image: url(img/30.png) !important;
+}
+
+.node-2-5-v {
+	background-image: url(img/30.png) !important;
+}
+
+.node-3-5-v {
+	background-image: url(img/30.png) !important;
+}
+
+
+/*条件*/
+
+.node-4-0-1 {
+	background-image: url(img/32.png) !important;
+	line-height: 50px !important;
+	height: 59px !important;
+}
+
+.node-4-0-3 {
+	background-image: url(img/33.png) !important;
+	line-height: 50px !important;
+	height: 59px !important;
+}
+
+
+/*并行开始*/
+
+
+/*并行结束*/
+
+.node-5-0-1,
+.node-6-0-1 {
+	background-image: url(img/37.png) !important;
+}
+
+.node-5-0-3,
+.node-6-0-3 {
+	background-image: url(img/38.png) !important;
+}
+
+
+/*自动*/
+
+.node-7-0-1 {
+	background-image: url(img/41.png) !important;
+}
+
+.node-7-0-3 {
+	background-image: url(img/42.png) !important;
+}
+
+
+/*右箭头*/
+
+.node-right {
+	width: 35px !important;
+	background: url(img/right.png) no-repeat !important;
+	height: 38px !important;
+	margin-top: 29px !important;
+}
+
+
+/*当前节点*/
+
+.currnode {
+	animation: currnodeAni 1.25s infinite;
+}
+
+@keyframes currnodeAni {
+	from {
+		opacity: 0.5;
+	}
+	50% {
+		opacity: 1;
+	}
+	to {
+		opacity: 0.5;
+	}
+}

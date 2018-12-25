@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>流程图编辑</title>
+		{include file="common@common/meta" /}
+		<link href="__RESOURCE__css/platform/index.css" rel="stylesheet">
+		<style type="text/css">
+			.form-horizontal .form-group {
+				margin-right: 0px !important;
+				margin-left: 0px !important;
+			}
+			
+			.form-horizontal .new-control-label {
+				padding-top: 7px;
+				margin-bottom: 0;
+				text-align: right;
+			}
+			
+			.new-control-label {
+				float: left;
+				padding-top: 5px;
+				text-align: right;
+			}
+			
+			.chosen-results {
+				max-height: 140px !important;
+			}
+		</style>
+	</head>
+
+	<body style="overflow-x: auto;">
+
+		<div class="flow-info-box" style="display: none;">
+			<div class="form-container form-horizontal padding-top-15">
+				<div class="flow-info-shade" style="display: block;">
+
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 new-control-label">流程图</label>
+					<div class="col-sm-4">
+						<select class="form-control flow_id">
+
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 new-control-label">流程图名称<span class="text-danger">*</span></label>
+					<div class="col-sm-4">
+						<input type="text" class="form-control flow_name" placeholder="流程图名称" title="流程图名称">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 new-control-label">流程类型<span class="text-danger">*</span></label>
+					<div class="col-sm-4">
+						<select class="form-control flow_type">
+							<option value="1">业务流程</option>
+							<option value="2">行政流程</option>
+						</select>
+					</div>
+					<label class="col-sm-2 new-control-label">流程图对应表<span class="text-danger">*</span></label>
+					<div class="col-sm-4">
+						<input type="text" value="VanLoan" class="form-control flow_table" placeholder="流程图对应表" title="流程图对应表">
+					</div>
+				</div>
+				<div class="flow-info-bottom text-right padding-10">
+					<div class="btn btn-info flow-info-submit">确定</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="flow-editor-box" style="display: none;">
+			<div class="form-container form-horizontal padding-top-15">
+				<div class="form-group">
+					<label class="col-sm-2 new-control-label">流程图名称<span class="text-danger">*</span></label>
+					<div class="col-sm-4">
+						<input type="text" class="form-control flow_name" placeholder="流程图名称" title="流程图名称">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 new-control-label">流程类型<span class="text-danger">*</span></label>
+					<div class="col-sm-4">
+						<select class="form-control flow_type">
+							<option value="1">业务流程</option>
+							<option value="2">行政流程</option>
+						</select>
+					</div>
+					<label class="col-sm-2 new-control-label">流程图对应表<span class="text-danger">*</span></label>
+					<div class="col-sm-4">
+						<input type="text" value="main_van_loan" class="form-control flow_table" placeholder="流程图对应表" title="流程图对应表">
+					</div>
+				</div>
+				<div class="flow-info-bottom text-right padding-10">
+					<div class="btn btn-info flow-editor-submit">确定</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="node-conf-box" style="display:none;">
+			<div class="node-info-top padding-top-15">
+				<ul class="node-conf-tab" style="margin-left: 10px;">
+					<li data-tab="node-tab-add" class="active">新增</li>
+				</ul>
+			</div>
+			<div class="node-info-mid">
+				<!--权限-->
+				<div class="node-info-content form-container form-horizontal node-tab-conf">
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">节点名称<span class="text-danger"></span></label>
+						<div class="col-sm-10 node-conf-name" style="line-height: 30px;">
+							
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">配置公司<span class="text-danger"></span></label>
+						<div class="col-sm-10">
+							<select class="form-control province_id chosen">
+
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">节点执行角色<span class="text-danger"></span></label>
+						<div class="col-sm-10">
+							<select class="form-control node_role chosen" multiple="multiple">
+
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">节点执行者<span class="text-danger"></span></label>
+						<div class="col-sm-10">
+							<select class="form-control node_user chosen" multiple="multiple">
+
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">订单执行者<span class="text-danger"></span></label>
+						<div class="col-sm-10">
+							<select class="form-control node_bill_user chosen">
+
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="node-info-bottom text-right padding-10">
+				<div class="btn btn-danger node-conf-cancel">取消</div>
+				<div class="btn btn-info node-conf-submit">确定</div>
+			</div>
+
+		</div>
+
+		<div class="node-info-box" style="display: none;">
+			<div class="node-info-top padding-top-15">
+				<ul class="node-info-tab">
+					<li data-tab="node-tab-atr" class="active">属性</li>
+					<li data-tab="node-tab-role">权限</li>
+					<li data-tab="node-tab-ele">元素</li>
+				</ul>
+			</div>
+			<div class="node-info-mid">
+				<div class="node-info-content form-container form-horizontal node-tab-atr">
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">节点名称<span class="text-danger">*</span></label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control node_name" placeholder="节点名称" title="节点名称">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">节点类型<span class="text-danger">*</span></label>
+						<div class="col-sm-4">
+							<select class="form-control node_flow_type">
+								<option value="1">普通节点</option>
+								<option value="2">流程开始</option>
+								<option value="3">流程结束</option>
+								<option value="4">条件节点</option>
+								<option value="5">并行开始</option>
+								<option value="6">并行结束</option>
+								<option value="7">自动节点</option>
+							</select>
+						</div>
+						<label class="col-sm-2 new-control-label">页面类型<span class="text-danger">*</span></label>
+						<div class="col-sm-4">
+							<select class="form-control node_html_type">
+								<option value="1">查阅页面</option>
+								<option value="2">分配页面</option>
+								<option value="3">录入页面</option>
+								<option value="4">校队页面</option>
+								<option value="5">审批页面</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">条件函数<span class="text-danger"></span></label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control node_condi_func" placeholder="条件节点执行函数" title="条件节点执行函数">
+						</div>
+						<label class="col-sm-2 new-control-label">线程创建函数<span class="text-danger"></span></label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control node_first_func" placeholder="节点线程创建时执行的函数" title="节点线程创建时执行的函数">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">正常函数<span class="text-danger"></span></label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control node_func" placeholder="节点正常执行函数" title="节点正常执行函数">
+						</div>
+						<label class="col-sm-2 new-control-label">执行条件函数<span class="text-danger"></span></label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control node_exec_func" placeholder="节点执行的条件函数" title="节点执行的条件函数">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">节点标志<span class="text-danger"></span></label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control node_flag" placeholder="节点标志" title="节点标志">
+						</div>
+						<label class="col-sm-2 new-control-label">执行时间<span class="text-danger">*</span></label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control node_time" value="2" placeholder="小时" title="小时">
+						</div>
+					</div>
+				</div>
+
+				<!--权限-->
+				<div class="node-info-content form-container form-horizontal node-tab-role" style="display: none;">
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">回退权限<span class="text-danger">*</span></label>
+						<div class="col-sm-4">
+							<select class="form-control node_back_type">
+								<option value="0">否</option>
+								<option value="1">是</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">修改方案权限<span class="text-danger">*</span></label>
+						<div class="col-sm-4">
+							<select class="form-control node_plan">
+								<option value="0">否</option>
+								<option value="1">是</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">节点执行角色<span class="text-danger"></span></label>
+						<div class="col-sm-10">
+							<select class="form-control node_role chosen" multiple="multiple">
+
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">节点执行者<span class="text-danger"></span></label>
+						<div class="col-sm-10">
+							<select class="form-control node_user chosen" multiple="multiple">
+
+							</select>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">订单执行者<span class="text-danger"></span></label>
+						<div class="col-sm-10">
+							<select class="form-control node_bill_user chosen">
+
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<!--子节点-->
+				<div class="node-info-content form-container form-horizontal node-tab-ele" style="display: none;">
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label">必填元素<span class="text-danger"></span></label>
+						<div class="col-sm-10">
+							<select name="" class="form-control node_nes_field chosen" multiple="multiple">
+
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label ">可选元素<span class="text-danger"></span></label>
+						<div class="col-sm-10">
+							<select name="" class="form-control node_nones_field chosen" multiple="multiple">
+
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 new-control-label ">自动生成元素<span class="text-danger"></span></label>
+						<div class="col-sm-10">
+							<select name="" class="form-control node_auto_field chosen" multiple="multiple">
+
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="node-info-bottom text-right padding-10">
+				<div class="btn btn-danger node-info-cancel">取消</div>
+				<div class="btn btn-info node-info-submit">确定</div>
+			</div>
+
+		</div>
+
+		<!-- fixed navbar -->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<div class="pull-left">
+						<span id="flow-title">流程图设计</span>
+					</div>
+					<div class="pull-right">
+						<button class="btn btn-info" type="button" id="flow_editor">编辑属性</button>
+						<button class="btn btn-info" type="button" id="flow_save">保存设计</button>
+						<button class="btn btn-warning" type="button" id="flow_validate">验证流程图</button>
+						<button class="btn btn-danger" type="button" id="flow_clear">清空连接</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--contextmenu div-->
+		<div id="processMenu" style="display:none;">
+			<ul>
+				<li id="pmAttribute"><i class="fa fa-lg fa-gear"></i>&nbsp;<span class="_label">属性</span></li>
+				<li id="pmProvinceSetting"><i class="fa fa-lg fa-gear"></i>&nbsp;<span class="_label">省配置</span></li>
+				<li id="pmDelete"><i class="fa fa-lg fa-trash"></i>&nbsp;<span class="_label">删除</span></li>
+			</ul>
+		</div>
+		<div id="canvasMenu" style="display:none;">
+			<ul>
+				<li id="cmSave"><i class="fa fa-lg fa-save"></i>&nbsp;<span class="_label">保存设计</span></li>
+				<li id="cmAdd"><i class="fa fa-lg fa-plus"></i>&nbsp;<span class="_label">添加节点</span></li>
+			</ul>
+		</div>
+		<!--end div-->
+		<div class="container mini-layout clearfix" id="flowdesign_canvas">
+			<!--div class="process-step btn" style="left: 189px; top: 340px;"><span class="process-num badge badge-inverse"><i class="icon-star icon-white"></i>3</span> 步骤3</div-->
+		</div>
+
+		{include file="common@common/script" /}
+	</body>
+
+</html>

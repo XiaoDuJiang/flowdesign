@@ -1,0 +1,472 @@
+* {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	box-sizing: border-box;
+	font-family: "microsoft yahei";
+}
+
+p {
+	margin: 0;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+.mini-layout {
+	width: 100%;
+	height: 100%;
+	background: rgb(58, 65, 68) url(/Public/images/grid.png) repeat;
+}
+
+.process-step {
+	position: absolute;
+	cursor: move;
+	min-width: 100px;
+	line-height: 28px
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+.displaynone {
+	display: none;
+}
+
+.displayblock {
+	display: block;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+#current_flow {
+	padding-bottom: 15px;
+}
+
+.attribute_box {
+	position: fixed;
+	z-index: 1041;
+	width: 770px;
+	/*height: 480px;*/
+	top: 10%;
+	left: 50%;
+	margin-left: -400px;
+	background-color: white;
+	border-radius: 6px;
+	outline: none;
+	padding: 20px 15px 50px 15px;
+}
+
+.tap-pane {
+	margin-bottom: 20px;
+}
+
+.control-label {
+	float: left;
+	width: 160px;
+	padding-top: 5px;
+	text-align: right;
+}
+
+.controls {
+	margin-left: 180px;
+}
+
+.pane-bottom-line {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+#process_toms2side__sx,
+#process_toms2side__dx {
+	width: 220px;
+	height: 150px;
+}
+
+.ms2side__header {
+	font-size: 14px;
+	color: black;
+	font-weight: bold;
+}
+
+.attribute_box_bottom {
+	background-color: #f5f5f5;
+	border-top: 1px solid #ddd;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	left: 0px;
+	height: 30px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.mini-layout,
+.cust-flow {
+	background: url(img/bg.jpg) repeat !important;
+	min-width: 100% !important;
+	min-height: 100% !important;
+	width: auto !important;
+	height: 300% !important;
+}
+
+.navbar-inverse .navbar-inner {
+	background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.btn-info {
+	background: #1AB394;
+}
+
+.btn-info:hover {
+	background: #17a185;
+}
+
+.process-step {
+	padding: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+.process-flag {
+	background: none;
+	height: 20px;
+	width: 100%;
+	margin-left: -5px;
+	margin-right: -5px;
+	position: absolute !important;
+	z-index: 3;
+	left: 0;
+	top: 25px !important;
+}
+
+.process-step i {
+	display: none !important;
+}
+
+.layui-layer-loading .layui-layer-content {
+	margin: auto;
+}
+
+.attribute_box {
+	display: none;
+}
+
+.modal-backdrop {
+	display: none;
+}
+
+.pull-left span {
+	line-height: 40px;
+	font-size: 22px;
+}
+
+.flow-tab {
+	position: fixed;
+	right: 50px;
+	top: 60px;
+	z-index: 9999;
+}
+
+.flow-tab ul {
+	width: 176px;
+	margin: 0;
+	box-shadow: 1px 1px 1px gray;
+	border-radius: 5px;
+	background-color: white;
+}
+
+.flow-tab ul li {
+	width: 50%;
+    float: left;
+    cursor: pointer;
+    padding: 2px 8px;
+    border: 1px solid #E7E7E7;
+    height: 28px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.flow-tab ul li:first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.flow-tab ul li:last-child {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.flow-tab ul .active {
+	background-color: #E7E7E7;
+	color: #999999;
+}
+
+.cust-flow-draw {
+	padding-top: 100px;
+	width: 1100px;
+	margin: auto;
+	background-color: transparent;
+}
+
+.cust-flow-list>div {
+	float: left;
+	margin: 10px 7px;
+	text-align: center;
+	padding: 5px;
+	font-size: 14px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.process-step {
+	height: 58px !important;
+	padding: 5px !important;
+	font-size: 14px !important;
+}
+
+.select-shadow {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 99999;
+	overflow-y: auto;
+}
+
+.select-box {
+	width: 320px;
+	height: 175px;
+	background-color: white;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 100px;
+	border: 1px solid groove;
+	border-radius: 10px;
+}
+
+.select-title {
+	background-color: #1ab394;
+	float: none !important;
+	font-size: 18px;
+	line-height: 40px;
+	color: white;
+	padding: 0px 20px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#select-workflow {
+	margin-right: 10px;
+	text-align: center;
+}
+
+.select-div {
+	margin-top: 5px;
+}
+
+#choose-workflow {
+	position: relative;
+	top: 1px;
+	width: 70px;
+	font-size: 16px;
+	margin: 10px 15px 0 0;
+}
+
+.select-div {
+	position: relative;
+	width: 225px;
+}
+
+.select-div>div {
+	font-size: 16px;
+}
+
+.select-div ul {
+	width: 100%;
+}
+
+.select-div ul li {
+	font-size: 16px;
+	line-height: 25px;
+}
+
+.flownode_selector {
+	float: left;
+	width: 200px;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.flownode_selector span {
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+.flownode_list {
+	float: left;
+	width: 200px;
+	height: 90px;
+	background-color: white;
+	overflow-y: auto;
+	border: 1px solid gray;
+	padding: 5px;
+	border-radius: 5px;
+	margin-top: 7px;
+}
+
+.flownode_list li {
+	cursor: pointer;
+	padding: 2px 5px;
+	font-size: 14px;
+}
+
+.flownode_list .active,
+.flownode_list .active:hover {
+	background-color: #1AB394;
+	color: white;
+}
+
+.flownode_list li span {
+	margin-right: 5px;
+}
+
+.flownode_list li:hover {
+	background-color: #E7E7E7;
+}
+
+.process-shadow {
+	position: absolute;
+	height: 300%;
+	width: 100%;
+	z-index: 999;
+	top: 0;
+	left: 0;
+}
+
+.cust-flow-title span {
+	color: orange;
+}
+
+.node-info {
+	position: absolute;
+	width: 200px;
+	z-index: 1000;
+	border: 1px solid gray;
+	border-radius: 8px;
+	background-color: white;
+	top: 0;
+	left: 0;
+	padding: 5px;
+	display: none;
+}
+
+.node-info p {
+	margin: 1px;
+}
+
+.navbar-fixed-top {
+	border-bottom: 1px solid #080808;
+	box-shadow: 1px 1px 1px #999;
+	background-color: white;
+}
+
+.pull-left span {
+	line-height: 50px;
+}
+
+.pull-right {
+	margin: 10px;
+}
+
+.node-conf-tab,
+.node-info-tab {
+	padding: 0;
+	margin: 0 0 0 8%;
+	display: inline-block;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.node-info-top {
+	border-bottom: 1px solid #E7E7E7;
+	margin-bottom: 25px;
+}
+
+.node-conf-tab li,
+.node-info-tab li {
+	display: inline-block;
+	line-height: 20px;
+	padding: 10px 12px 4px;
+	border: 1px solid #E7E7E7;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	margin-bottom: -1px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.node-conf-tab .active,
+.node-info-tab .active {
+	border: 1px solid #999;
+	border-bottom: 1px solid white;
+	cursor: auto;
+}
+
+.flow-info-box {
+	position: relative;
+}
+
+.flow-info-shade {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	background-color: #E7E7E7;
+	opacity: 0.5;
+	top: 65px;
+	left: 0px;
+	z-index: 2;
+}
+
+.layui-layer-content {
+	overflow-x: hidden !important;
+}
+
+.process-step span {
+    position: absolute;
+    top: -50px;
+    height: 35px;
+    left: 52px;
+    font-size: 12px;
+    color: black;
+    z-index: 9999;
+}
